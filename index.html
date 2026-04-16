@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소프트웨어 다운로드 센터</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* 💡 [수정됨] 경기천년제목 Light 폰트 불러오기 */
+        @font-face {
+            font-family: 'GyeonggiTitleL';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleL.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 💡 [수정됨] 웹페이지 전체에 경기천년제목 Light 폰트 적용 */
+        body { font-family: 'GyeonggiTitleL', sans-serif; }
+        
         /* 부드러운 스크롤 및 전환 효과를 위한 커스텀 스타일 */
         html { scroll-behavior: smooth; }
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-    <!-- 내비게이션 바 -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -27,7 +38,6 @@
         </div>
     </nav>
 
-    <!-- 헤더 섹션 -->
     <header class="bg-blue-600 py-16 sm:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
@@ -39,16 +49,13 @@
         </div>
     </header>
 
-    <!-- 파일 목록 섹션 -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="mb-8 border-b pb-4">
             <h2 class="text-2xl font-bold text-gray-900">설치 파일</h2>
         </div>
 
-        <!-- 단일 파일 카드 하드코딩 -->
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             
-            <!-- 1. AJD 설치 파일 모음 -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full card-hover">
                 <div class="flex justify-between items-start mb-4">
                     <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
@@ -80,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- 2. 엑소스피어 설치 -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full card-hover">
                 <div class="flex justify-between items-start mb-4">
                     <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
@@ -115,7 +121,6 @@
         </div>
     </main>
 
-    <!-- 푸터 -->
     <footer class="bg-white border-t mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
             &copy; 2026 AJD-AppCenter. All rights reserved.
