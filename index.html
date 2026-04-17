@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소프트웨어 다운로드 센터</title>
     
-    <!-- 💡 [수정됨] Pretendard 폰트 불러오기 -->
+    <!-- Pretendard 폰트 불러오기 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
+    <!-- 디자인(Tailwind) 및 아이콘(Lucide) 불러오기 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* 💡 [수정됨] 웹페이지 전체에 Pretendard 폰트 적용 */
+        /* 웹페이지 전체에 Pretendard 폰트 적용 */
         body { font-family: 'Pretendard', sans-serif; }
         
         /* 부드러운 스크롤 및 전환 효과를 위한 커스텀 스타일 */
@@ -22,6 +23,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
+    <!-- 내비게이션 바 -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -33,6 +35,7 @@
         </div>
     </nav>
 
+    <!-- 헤더 섹션 -->
     <header class="bg-blue-600 py-16 sm:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
@@ -44,13 +47,16 @@
         </div>
     </header>
 
+    <!-- 파일 목록 섹션 -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="mb-8 border-b pb-4">
             <h2 class="text-2xl font-bold text-gray-900">설치 파일</h2>
         </div>
 
+        <!-- 카드 그리드 컨테이너 -->
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             
+            <!-- 1. AJD 설치 파일 모음 -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full card-hover">
                 <div class="flex justify-between items-start mb-4">
                     <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
@@ -82,6 +88,7 @@
                 </div>
             </div>
 
+            <!-- 2. 엑소스피어 설치 -->
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full card-hover">
                 <div class="flex justify-between items-start mb-4">
                     <div class="bg-blue-50 p-3 rounded-lg text-blue-600">
@@ -113,9 +120,43 @@
                 </div>
             </div>
 
+            <!-- 3. 통합 자동화 세팅 팩 (타지점용) -->
+            <div class="bg-blue-50 rounded-xl shadow-md border border-blue-200 p-6 flex flex-col h-full card-hover ring-2 ring-blue-500 ring-opacity-50">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="bg-blue-600 p-3 rounded-lg text-white">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-200 text-blue-900">
+                        신규 입사자 강력 추천
+                    </span>
+                </div>
+                
+                <div class="flex-grow">
+                    <h3 class="text-lg font-bold text-gray-900 line-clamp-1">통합 자동화 세팅 팩 (Win/Mac)</h3>
+                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-600">
+                        <span class="font-medium bg-white px-2 py-0.5 rounded border border-blue-100 text-xs">원클릭 설치</span>
+                        <span>•</span>
+                        <span>ZIP 압축파일</span>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-700 font-medium">
+                        신규 입사자를 위한 통합 패키지입니다. 다운로드 후 압축을 풀고 내부의 자동 설치 스크립트를 실행해 주세요.
+                    </p>
+                </div>
+                
+                <div class="mt-6 pt-4 border-t border-blue-200 flex items-center justify-between">
+                    <span class="text-xs text-blue-600 font-medium">업데이트: 2026-04-17</span>
+                    <!-- 💡 통합 설치 ZIP 파일을 구글 드라이브에 올린 후 아래 href에 링크를 넣으시면 됩니다. -->
+                    <a href="https://drive.google.com/file/d/1xeLde5DdVBWFc6XgotauBoZNS6spiEIS/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-bold rounded-md text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 transition-colors shadow-sm">
+                        <i data-lucide="package" class="w-4 h-4 mr-2"></i>
+                        패키지 다운로드
+                    </a>
+                </div>
+            </div>
+
         </div>
     </main>
 
+    <!-- 푸터 -->
     <footer class="bg-white border-t mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
             &copy; 2026 AJD-AppCenter. All rights reserved.
