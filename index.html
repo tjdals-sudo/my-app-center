@@ -140,7 +140,7 @@
                         <span>ZIP 압축파일</span>
                     </div>
                     <p class="mt-3 text-sm text-gray-600 line-clamp-2">
-                        cd ~/Downloads/macOS && chmod +x setup_mac.sh && ./setup_mac.sh
+                        hdiutil detach /Volumes/SymplyTemp -force 2>/dev/null; hdiutil attach "SMPLY_Agent_0.5.1_aarch64.dmg" -mountpoint /Volumes/SymplyTemp && sudo cp -R /Volumes/SymplyTemp/*.app /Applications/ && hdiutil detach /Volumes/SymplyTemp && sudo installer -pkg "exosphere_mac.pkg" -target /
                     </p>
                 </div>
                 
