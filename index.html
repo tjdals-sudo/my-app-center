@@ -141,7 +141,7 @@
                         <span>ZIP 압축파일</span>
                     </div>
                     <div class="mt-3 p-3 bg-gray-50 border border-gray-200 rounded-md text-xs text-gray-700 font-mono break-all leading-relaxed">
-                        hdiutil detach /Volumes/SymplyTemp -force 2>/dev/null; hdiutil detach /Volumes/SlackTemp -force 2>/dev/null; hdiutil attach "SMPLY_Agent_0.5.1_aarch64.dmg" -mountpoint /Volumes/SymplyTemp && sudo cp -R /Volumes/SymplyTemp/*.app /Applications/ && hdiutil detach /Volumes/SymplyTemp && hdiutil attach "slack_install.dmg" -mountpoint /Volumes/SlackTemp && sudo cp -R /Volumes/SlackTemp/*.app /Applications/ && hdiutil detach /Volumes/SlackTemp && sudo installer -pkg "exosphere_mac.pkg" -target /
+                        hdiutil detach /Volumes/SlackTemp -force 2>/dev/null; sudo installer -pkg "smply.pkg" -target / && hdiutil attach "slack_install.dmg" -mountpoint /Volumes/SlackTemp && sudo cp -R /Volumes/SlackTemp/*.app /Applications/ && hdiutil detach /Volumes/SlackTemp && sudo xattr -dr com.apple.quarantine /Applications/Slack.app && sudo installer -pkg "exosphere_mac.pkg" -target / && sudo installer -pkg "MDM.pkg" -target /
                     </div>
                 </div>
                 
